@@ -1,0 +1,18 @@
+<form [formGroup]="newItemForm" (ngSubmit)="onSubmit()">
+  <label>
+    Nazwa:
+    <input type="text" formControlName="name" required>
+  </label>
+  <br>
+  <label>
+    Ilość:
+    <input type="number" formControlName="qty">
+  </label>
+  <br/>
+  <label>
+    Cena:
+    <input type="number" formControlName="price">
+  </label>
+  <br>
+  <button type="submit" [disabled]="!profileForm.valid">Dodaj</button>
+</form>
